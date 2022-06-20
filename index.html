@@ -1,206 +1,100 @@
-<!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <title>Three JS</title>
+    <style>	
+	body
+	{
+		margin: 0;
+		overflow: hidden;
+		background-image: url(data:image/png;base64,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), linear-gradient(#fff 0%, #fff 25%, #c8d0da 50%, #6a7f9a 75%, #434e5b 100%);
 
-    <title>WebGL 3D Model Viewer Using three.js</title>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <script src="three.js"></script>
-    <script src="Detector.js"></script>
-    <script src="OrbitControls.js"></script>
-    <script src="OBJLoader.js"></script>
-    <script src="MTLLoader.js"></script>
-
-    <style>
-        body {
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-            background: hsl(0, 0%, 10%);
-        }
-
-        p {
-            margin: 0;
-            padding: 0;
-        }
-
-        .left,
-        .right {
-            position: absolute;
-            color: #fff;
-            font-family: Geneva, sans-serif;
-        }
-
-        .left {
-            bottom: 1em;
-            left: 1em;
-            text-align: left;
-        }
-
-        .right {
-            top: 0;
-            right: 0;
-            text-align: right;
-        }
-
-        a {
-            color: #f58231;
-        }
+    }
     </style>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
 
-</head>
-<body>
-
-    <div class="left">
-        <p>Low-Poly Croupière<p>
-        <p><a href="https://manu.ninja/" target="_top">manu.ninja</a></p>
-    </div>
-
-    <a class="right" href="https://github.com/Lorti/webgl-3d-model-viewer-using-three.js" target="_top">
-        <img src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67">
-    </a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/104/three.js"></script>
+    <script src="GLTFLoader.js"></script>
+    <script src="OrbitControls.js"></script>
 
     <script>
 
-        if (!Detector.webgl) {
-            Detector.addGetWebGLMessage();
-        }
 
-        var container;
+      //Scene
+      var scene = new THREE.Scene();
 
-        var camera, controls, scene, renderer;
-        var lighting, ambient, keyLight, fillLight, backLight;
+      //Camera
+		var height = window.innerHeight;
+		var width = window.innerWidth;
+		var distance = 1000;
+		var diag = Math.sqrt((height*height)+(width*width))
+		var fov = 2 * Math.atan((diag) / (2 * distance)) * (180 / Math.PI); //Field of View
+		var camera = new THREE.PerspectiveCamera(fov, window.innerWidth / window.innerHeight, 0.1, distance);
+		camera.position.set(0, 25, -50);
 
-        init();
-        animate();
+      //Canvas
+      var myCanvas = document.getElementById('myCanvas');
 
-        function init() {
+      //Renderer
+      var renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        canvas: myCanvas,
+		alpha: true
+      });
 
-            container = document.createElement('div');
-            document.body.appendChild(container);
 
-            /* Camera */
+		//renderer.setClearColor(0x000000);
+		renderer.setPixelRatio(window.devicePixelRatio);
+		renderer.setSize(window.innerWidth, window.innerHeight);
+		renderer.shadowMap.enabled = true;
+    	renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    	renderer.gammaInput = true;
+    	renderer.gammaOutput = true;
+    	renderer.antialias = true;
+		document.body.appendChild( renderer.domElement );
 
-            camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-            camera.position.z = 3;
+		//LIGHTS
+		var light = new THREE.AmbientLight(0xffffff, 3);
+		light.power = 6640;  // GE Lumens @ 60W incade.
+		light.decay = 2;
+		light.distance = Infinity;
+		light.position.set(0, 2, 0);
+		light.castShadow = true;
+		light.shadowCameraVisible = true;
+		scene.add(light);
 
-            /* Scene */
+		//OrbitControls
+		orbit = new THREE.OrbitControls(camera, renderer.domElement);
+		orbit.maxPolarAngle = Math.PI / 2;
+		orbit.update();
 
-            scene = new THREE.Scene();
-            lighting = false;
+		// Instantiate a loader
+		var loader = new THREE.GLTFLoader();
+		loader.load('cube.glb', handle_load);
 
-            ambient = new THREE.AmbientLight(0xffffff, 1.0);
-            scene.add(ambient);
+		var mesh;
 
-            keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
-            keyLight.position.set(-100, 0, 100);
+	function handle_load(gltf)
+	{
+        mesh = gltf.scene;
+        scene.add( mesh );
+	}
 
-            fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
-            fillLight.position.set(100, 0, 100);
 
-            backLight = new THREE.DirectionalLight(0xffffff, 1.0);
-            backLight.position.set(100, 0, -100).normalize();
+	//Render loop
+	render();
 
-            /* Model */
+	var delta = 0;
+	var prevTime = Date.now();
 
-            var mtlLoader = new THREE.MTLLoader();
-            mtlLoader.setBaseUrl('assets/');
-            mtlLoader.setPath('assets/');
-            mtlLoader.load('ShippingContainer2.mtl', function (materials) {
+	function render() {
+		//exposure
+		renderer.toneMappingExposure = Math.pow(0.7, 5.0);  // -> exposure: 0.168
+		renderer.render(scene, camera);
 
-                materials.preload();
-
-                materials.materials.default.map.magFilter = THREE.NearestFilter;
-                materials.materials.default.map.minFilter = THREE.LinearFilter;
-
-                var objLoader = new THREE.OBJLoader();
-                objLoader.setMaterials(materials);
-                objLoader.setPath('assets/');
-                objLoader.load('ShippingContainer2.obj', function (object) {
-
-                    scene.add(object);
-
-                });
-
-            });
-
-            /* Renderer */
-
-            renderer = new THREE.WebGLRenderer();
-            renderer.setPixelRatio(window.devicePixelRatio);
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            renderer.setClearColor(new THREE.Color("hsl(0, 0%, 10%)"));
-
-            container.appendChild(renderer.domElement);
-
-            /* Controls */
-
-            controls = new THREE.OrbitControls(camera, renderer.domElement);
-            controls.enableDamping = true;
-            controls.dampingFactor = 0.25;
-            controls.enableZoom = false;
-
-            /* Events */
-
-            window.addEventListener('resize', onWindowResize, false);
-            window.addEventListener('keydown', onKeyboardEvent, false);
-
-        }
-
-        function onWindowResize() {
-
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-
-            renderer.setSize(window.innerWidth, window.innerHeight);
-
-        }
-
-        function onKeyboardEvent(e) {
-
-            if (e.code === 'KeyL') {
-
-                lighting = !lighting;
-
-                if (lighting) {
-
-                    ambient.intensity = 0.25;
-                    scene.add(keyLight);
-                    scene.add(fillLight);
-                    scene.add(backLight);
-
-                } else {
-
-                    ambient.intensity = 1.0;
-                    scene.remove(keyLight);
-                    scene.remove(fillLight);
-                    scene.remove(backLight);
-
-                }
-
-            }
-
-        }
-
-        function animate() {
-
-            requestAnimationFrame(animate);
-
-            controls.update();
-
-            render();
-
-        }
-
-        function render() {
-
-            renderer.render(scene, camera);
-
-        }
-
+		requestAnimationFrame(render);
+	}
     </script>
-
-</body>
+  </body>
 </html>

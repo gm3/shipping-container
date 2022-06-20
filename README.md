@@ -1,23 +1,29 @@
-# Shipping Container
+# threejs-gltf-template
+A simple GLTF/GLB Three JS template
 
-![](https://i.imgur.com/CeqjZh2.png)
+## Features
 
-![](https://i.imgur.com/WOMptBv.png)
+* Gradient background with texture noise
+* Orbit controller
 
+<img src="image.jpg" />
 
+## Usage
 
+Replace the file name cube.glb with your own file
 
-Credit:
+```javascript
+loader.load('cube.glb', handle_load);
+```
 
-WebGL 3D Model Viewer Using three.js
-https://github.com/Lorti/webgl-3d-model-viewer-using-three.js
+Adjust the camera field of view (FOV) to see more of less of your model in the screen. To change the FOV update the number 24 in the code below.
 
-### WebGL 3D Model Viewer Using three.js
+```javascript
+var camera = new THREE.PerspectiveCamera(24,window.innerWidth / window.innerHeight,1,1000);
+```
 
-##### Specification
+Adjust the ambient light in the scene but changing the color or intensity. To change the color update the hex value 0xffffff and to change the intensity change the number 3.
 
-* OBJ loader for loading a geometry format that is as old and widely supported as GIFs.
-* MTL loader for loading really simple materials.
-* Orbit controls to smoothly turn the camera around the model.
-* Nearest-neighbor filtering and a pure white ambient light to showcase pixel art textures.
-* All libraries taken from the [three.js](https://github.com/mrdoob/three.js/) repository.
+```javascript
+var light = new THREE.AmbientLight(0xffffff, 3);
+```
